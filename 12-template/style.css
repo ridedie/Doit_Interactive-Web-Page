@@ -334,7 +334,7 @@ figure .btnNext::before {
 }
 
 /* 다음 버튼 화살표 라인 가상 요소 */
-figure .btnPrev::after {
+figure .btnNext::after {
     content: "";
     display: block;
     width: 100%;
@@ -343,7 +343,20 @@ figure .btnPrev::after {
     position: absolute;
     bottom: 50%;
     left: 0px;
-    transform-origin: left center;
-    transform: rotate(180deg);
+    transform-origin: right center;
+    transform: rotate(-180deg);
     transition: 0.5s;
+}
+
+figure .btnNext:hover span {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+figure .btnNext:hover::before {
+    transform: rotate(30deg);
+}
+
+figure .btnNext:hover::after {
+    transform:  rotate(-30deg);
 }

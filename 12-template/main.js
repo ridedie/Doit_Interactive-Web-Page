@@ -2,7 +2,7 @@ const frame = document.querySelector("section");
 const lists = frame.querySelectorAll("article");
 const prev = document.querySelector(".btnPrev");
 const next = document.querySelector('.btnNext');
-const audio = frame.querySelectorAll(audio);
+const audio = frame.querySelectorAll("audio");
 // 각각의 article 요소가 회전할 각도
 const deg = 45;
 // 순번이 0부터 시작하므로 전체 개수에서 1을 뺌
@@ -116,7 +116,7 @@ next.addEventListener("click", ()=>{
 
 
 // 모든 오디오 요소를 반복하면서 정지 시키고 .pic 요소의 모션을 중지해서 초기화 하는 함수
-function initMusic {
+function initMusic() {
     for(let el of audio) {
         el.pause();
         el.load();
